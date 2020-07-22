@@ -11,6 +11,7 @@ export default function scheduleReducer(state=initialState, action) {
                 {...todo, complete: !todo.complete} : todo)
             }
         case "DELETE_TODO":
+            alert(``)
             return {
                 ...state,
                 todos: state.todos.filter(todo => todo.todoId !== action.payload)

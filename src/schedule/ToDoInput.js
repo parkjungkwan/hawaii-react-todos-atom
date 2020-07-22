@@ -15,7 +15,7 @@ const ToDOInput =() => {
     const submitForm = e => {
         e.preventDefault()
         const newTodo = {
-            id: uuid(),
+            todoId: uuid(),
             name: todo,
             complete: false
         }

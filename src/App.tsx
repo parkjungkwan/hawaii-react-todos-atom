@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux'
 import './App.css';
 import ToDOInput from "./schedule/ToDoInput";
 import ToDoList from "./schedule/ToDoList";
+import store from "./schedule/store"
 
 const App = () => {
   return <>
-  <ToDOInput/><br/><ToDoList/>
+    <Provider store = {store}>
+      <ToDOInput/><br/><ToDoList/>
+    </Provider>
   </>
 }
 

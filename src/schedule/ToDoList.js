@@ -20,7 +20,7 @@ const ToDoList = () => {
                         <input
                             type="checkbox"
                             checked={todo.complete}
-                            onChange={toggleTodo.bind(null, todo.id)}
+                            onChange={toggleTodo.bind(null, todo.todoId)}
                         />
                     </div>
                     <div className="col-sm-8">
@@ -29,7 +29,7 @@ const ToDoList = () => {
                     <div className="col-sm-2">
                         <button
                             className="btn btn-danger"
-                            onClick={deleteTodo.bind(null, todo.id)}
+                            onClick={deleteTodo.bind(null, todo.todoId)}
                         >
                             X
                         </button>
