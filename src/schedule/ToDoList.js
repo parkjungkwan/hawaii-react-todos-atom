@@ -7,7 +7,7 @@ const ToDoList = () => {
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch()
     const toggleTodo = todoId => dispatch(toggleTodoAction(todoId))
-    // const deleteTodo = ?
+    const deleteTodo = todoId => dispatch(deleteTodoAction(todoId))
     return <>
         <div>
             {todos && todos.length === 0 && (
