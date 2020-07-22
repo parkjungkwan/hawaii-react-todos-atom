@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import {useDispatch} from 'react-redux'
-import {addTodoAction} from './store/schedule.action'
+import {addTodoAction} from './store/schedule.reducer'
 import uuid from 'uuid/v4'
 
 const ToDOInput =() => {

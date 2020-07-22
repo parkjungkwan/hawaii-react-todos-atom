@@ -1,5 +1,5 @@
 import {createStore} from 'redux'
-import scheduleReducer from "./scheudule.reducer";
+import scheduleReducer from "./schedule.reducer";
 
 const store = createStore(
     scheduleReducer
