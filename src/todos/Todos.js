@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 const TodoItem = ({todo, onToggle, onRemove}) =>{
     return <>
         <div>
@@ -9,8 +9,8 @@ const TodoItem = ({todo, onToggle, onRemove}) =>{
                 readOnly={true}
             />
             <span style={{ textDecoration: todo.done ? 'line-through' : 'none' }}>
-    {todo.text}
-  </span>
+                {todo.text}
+              </span>
             <button onClick={() => onRemove(todo.id)}>삭제</button>
         </div>
     </>
@@ -33,10 +33,6 @@ const Todos= ({input, todos, onChangeInput, onInsert,  onToggle, onRemove}) => {
            <div>
                <div >
                    <input
-                       type="text"
-                       placeholder="Add a todo"
-                       name="todo"
-                       className="form-control"
                        value={input}
                        onChange={onChange}
                    />

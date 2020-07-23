@@ -5,7 +5,17 @@ import {changeInput,insert, toggle, remove} from "./store/todos.reducer";
 import Todos from './Todos'
 const TodosApp = () => {
     const {input, todos} =
-        useSelector(({todos})=>({input: todos.input, todos: todos.todos}))
+        useSelector(({todosReducer})=>{
+
+            if (typeof(todosReducer.input) == 'undefined') {
+                alert(`todos.input 은 undefinded 입니다`)
+            }else{
+                alert(`todos.input 은 객체 입니다`)
+                return {input: todosReducer.input, todos: todosReducer.todos}
+            }
+
+
+        })
     const [onChangeInput, onInsert, onToggle, onRemove] = useActions(
         [changeInput, insert, toggle, remove],
         []
