@@ -58,4 +58,4 @@ const Todos= ({input, todos, onChangeInput, onInsert,  onToggle, onRemove}) => {
    </div>
    </>
 }
-export default TodoItem
+export default Todos
