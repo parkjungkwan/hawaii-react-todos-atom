@@ -10,7 +10,7 @@ const TodosApp = () => {
             if (typeof(todosReducer.input) == 'undefined') {
                 alert(`todos.input 은 undefinded 입니다`)
             }else{
-                alert(`todos.input 은 객체 입니다`)
+
                 return {input: todosReducer.input, todos: todosReducer.todos}
             }
 
